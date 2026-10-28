@@ -131,14 +131,14 @@
 
 //  for trace
 // CallEnd is needed. Take care of the goto.
-inline void CallStart(const char *traceName)
+static inline void CallStart(const char *traceName)
 {
 #ifdef FEATURE_HITRACE_METER
     HiTraceStartTrace(HITRACE_AUDIO_TAG, traceName);
 #endif
 }
 
-inline void CallEnd()
+static inline void CallEnd()
 {
 #ifdef FEATURE_HITRACE_METER
     HiTraceFinishTrace(HITRACE_AUDIO_TAG);
